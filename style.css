@@ -76,25 +76,21 @@ nav ul a {
 
 header {
   display: flex;
-  /* width: 100vw; */
-  position: relative;
-  /* height: 820px; */
 }
 header img {
   width: 50%;
+  
 }
 .hero-text {
   background-color: #171d28;
   color: white;
   width: 50%;
-  position: relative;
 }
 .hero-textin {
-  position: absolute;
   width: 49.7rem;
   background-color: transparent;
-  left: 6.3rem;
-  top: 24rem;
+  margin-left: 6.3rem;
+  margin-top: 24rem;
 }
 .hero-textin h1 {
   font-size: 7.2rem;
@@ -141,6 +137,7 @@ button {
 }
 .logos {
   display: flex;
+  flex-wrap: wrap;
   gap: 2.4rem;
   height: 6.4rem;
 }
@@ -237,6 +234,7 @@ button {
 .categories {
   display: flex;
   gap: 2.4rem;
+  flex-wrap: wrap;
 }
 .collections article .collection {
   height: 66.4rem;
@@ -302,6 +300,7 @@ button {
   max-width: 144rem;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .video-box {
@@ -412,11 +411,15 @@ p {
 
 .news-images {
   display: flex;
+  flex-wrap: wrap;
+  /* column-gap:auto ; */
+  /* column-gap: 2.4rem; */
   justify-content: space-between;
 }
 
 .values {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 1.6rem;
   margin-bottom: 1.6rem;
@@ -452,6 +455,7 @@ p {
 }
 .foot{
   margin-bottom: 0;
+
 }
 footer{
   background-color: #E8ECEF;
@@ -459,6 +463,7 @@ footer{
 }
 .one{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top:8rem ;
   margin-bottom: 6.4rem;
@@ -466,6 +471,7 @@ footer{
 .one div{
   display: flex;
   flex-direction: column;
+  
   gap: 0.8rem;
 }
 .one .title{
@@ -550,5 +556,44 @@ button{
   font-size: 1.4rem;
   /* height: 2.4rem; */
   /* overflow: hidden; */
+
+}
+.one .email-box{
+  width: 35.2rem;
+  height: 4.8rem;
+  background-color: transparent;
+  border-color: #6C7275;
+  border: #6C7275;
+  border-width: 1px;
+  display: flex;
+  gap: 1.8rem;
+  border-radius: 4rem;
+  padding: 0.4rem;
+  border: 0.2rem solid #ccd4d8 ;
+  /* border-o */
+  /* justify-content: center; */
+  align-items: center;
+  justify-content: space-between;
+  /* padding-top: 1.4rem;
+  padding-bottom: 1.4rem; */
+
+}
+.one .email-box input{
+  border: none;
+  background-color: transparent;
+  margin-left: 1.6rem;
+}
+.email-box button{
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #377DFF;
+  color: white;
+  padding: 0.4rem 0.4rem;
+  font-size: 1.6rem;
+  /* margin-left: 0.8rem; */
+  margin-right: 0.08rem;
+
 
 }
