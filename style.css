@@ -967,35 +967,30 @@ input,textarea{
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.12;
-  font-size: clamp(3.4rem,5vw,4rem);
+h1,p{
+  overflow: hidden;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* p,button{
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
