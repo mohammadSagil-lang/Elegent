@@ -14,22 +14,35 @@ html {
   font-weight: 500;
   font-style: normal;
 }
+.section-center {
+  width: 85vw;
+  margin: 4.8rem auto;
+  max-width: 117rem;
+}
 h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 4rem;
+  line-height: 1.12;
+  font-size: clamp(3.4rem,5vw,4rem);
 }
-p{
+p,button{
   font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-size: clamp(1.6rem, 1.6vw, 2rem);
+  line-height: 1.1;
+  font-style: normal;
+  letter-spacing: 0px;
+  
 }
+/* ******************************************************
+Home Page starts
+****************************************************** */
 .Home-page {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
   max-width: 144rem;
   margin: 0 auto;
 }
@@ -37,15 +50,22 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #377dff;
+  background-color: #377DFF;
   line-height: 4rem;
   color: white;
   gap: 1.2rem;
-  font-size: 1.4rem;
+  /* font-size: 1rem; */
   /* padding:40px 0 ; */
+}
+
+.notification_bar p{
+  font-size: clamp(1.2rem, 1.6vw, 1.4rem);
+
 }
 button {
   cursor: pointer;
+  font-size: clamp(1.2rem, 1.6vw, 1.4rem);
+  padding:auto 0;
 }
 .notification_bar button {
   background-color: inherit;
@@ -56,16 +76,17 @@ button {
 nav {
   display: flex;
   height: 6rem;
+  width: 85vw;
+  margin: 0 auto;
   align-items: center;
-  justify-content: center;
-  gap: 26.05rem;
+  justify-content:space-between;
 }
 nav ul {
   display: flex;
   list-style: none;
   text-align: center;
   justify-content: center;
-  gap: 4rem;
+  gap: clamp(1.6rem,5vw,4rem);
 }
 nav ul a {
   text-decoration: none;
@@ -74,61 +95,187 @@ nav ul a {
   color: black;
 }
 
-header {
-  display: flex;
-}
-header img {
-  width: 50%;
-  
-}
-.hero-text {
-  background-color: #171d28;
-  color: white;
-  width: 50%;
-}
-.hero-textin {
-  width: 49.7rem;
-  background-color: transparent;
-  margin-left: 6.3rem;
-  margin-top: 24rem;
-}
-.hero-textin h1 {
-  font-size: 7.2rem;
-  letter-spacing: 0px;
-  line-height: 1;
-  overflow: hidden;
-  margin-bottom: 0.8rem;
-}
-.hero-heading {
-  /* margin-bottom: 8px; */
-}
-.hero-textin p {
-  margin-bottom: 2.8rem;
-  line-height: 3.2rem;
-}
 
 .hero-textin p,
 button {
   font-family: "Inter", sans-serif;
-  /* font-optical-sizing: auto; */
+  font-optical-sizing: auto;
   font-weight: 200;
   font-size: 2rem;
-  font-style: normal;
+  /* font-style: normal; */
   letter-spacing: 0px;
 }
+
 .hero-textin button {
-  padding: 1.2rem 5.6rem;
+  
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
   background-color: #377dff;
   color: white;
   border: none;
+  /* font-size: 1.6rem; */
+  font-size: clamp(1.2rem, 1.6vw, 1.6rem);
+  padding: 1.2em 5.6em;
+  /* line-height: 2.8rem; */
   border-radius: 0.8rem;
   /* width: 234px; */
 }
-.section-center {
-  width: 85vw;
-  margin: 4.8rem auto;
-  max-width: 117rem;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* inspired by gpt */
+
+
+header{
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  background-color: #171d28;
 }
+.hero-textin{
+  margin: 0 0;
+  color: white;
+}
+.hero-img-box,.hero-textin{
+  flex: 1;
+}
+
+.hero-img-box img{ 
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+  align-self: stretch;
+}
+
+.hero-textin h1 {
+  font-size: clamp(4rem, 5vw, 7.2rem);
+  line-height: 1.1;
+  margin: 0;
+  overflow: hidden;
+}
+
+.hero-textin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(1.6rem,3vw,2.4rem);
+}
+.hero-textin p {
+  font-size: clamp(1.6rem, 1.6vw, 2rem);
+  line-height: 1.6;
+  margin: 0;
+  overflow: hidden;
+  margin-top: clamp(-1rem,3vw,-2rem);
+}
+
+.hero-textin button{
+  padding:1.2em 5.6em ;
+  width: fit-content;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 414px) {
+  .section-center{
+    width: 82.93vw;
+    margin: 4.8rem auto;
+  }
+  .notification_bar{
+    height: 3.6rem;
+    font-size: 1.2rem;
+    letter-spacing: 0px;
+
+  }
+  .notification_bar img{
+    height: 1.6rem;
+    width: 1.6rem;
+
+  }
+  nav{
+    height:6rem;
+    width: 82.933vw;
+    justify-content: space-between;
+  }
+  nav ul{
+    display: none;
+  }
+  .notification_bar button {
+    display: none;
+    /* font-size: 3rem; */
+  }
+  nav h1{
+    font-size: 1.6rem;
+    letter-spacing: 0px;
+    font-weight: 600;
+  }
+  header {
+    flex-direction: column;
+    justify-content: center;
+    height: 69.2rem;
+  } 
+  .hero-img-box {
+    width: 100vw;
+    height:37.5rem;
+    overflow: hidden; /* crops overflow */
+    margin-bottom: 0;
+  }
+  .hero-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* crop to fill */
+  }
+  .hero-textin {
+    width:fit-content ;
+    margin-top: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  /* .hero-textin{
+    margin: 4.85rem 3.2rem ;
+  }
+  .hero-textin h1 {
+    font-size: 4rem;
+    letter-spacing: 0px;
+    line-height: 1;
+    margin-bottom: 1.6rem;
+  } */
+  .hero-textin p,button{
+    font-size:1.6rem ;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    line-height:1.625;
+    overflow: hidden;
+  }
+  .hero-textin button{
+    padding:1.2em 5.6em ;
+    font-family: 'Inter',sans-serif;
+    color: #141718;
+  }
+}
+/* ******************************************************
+Brands  Starts
+****************************************************** */
+
 .brands h1 {
   /* margin-top: 4rem; */
   margin-bottom: 1.6rem;
@@ -138,15 +285,36 @@ button {
 .logos {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.4rem;
+  justify-content: space-between;
   height: 6.4rem;
 }
-.brands {
-  /* margin-bottom: 0; */
+
+@media screen and (max-width:414px) {
+  .brands{
+    margin-top:2.4rem ;
+    margin-bottom: 2.4rem;
+    width: 24rem;
+  }
+  .brands h1{
+
+    color:#6C7275;
+    font-weight: 600;
+  }
+  .logos{
+    height: 4rem;
+
+  }
+  .logos img{
+    width: 12rem;
+    height: 4rem;
+  }
 }
-/* .ju */
+/* ******************************************************
+justin  Starts
+****************************************************** 
+*/
 .justin h1 {
-  margin-bottom: 4.8rem;
+  margin-bottom: 4rem;
 }
 .justin p {
   font-family: "Inter", sans-serif;
@@ -168,7 +336,8 @@ button {
 }
 .justin .new {
   display: flex;
-  gap: 2.4rem;
+  /* gap:2.4rem; */
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -193,15 +362,15 @@ button {
 
 .justin article .hov button {
   position: absolute;
-  left: 1.6rem;
-  top: 28.7rem;
+  left: 1.111vw;
+  top: 21.5vw;
 }
 .justin article .hov img {
   height: 3.2rem;
   width: 3.2rem;
   position: absolute;
-  top: 1.6rem;
-  right: 1.6rem;
+  top: 1.111vw;
+  right: 1.111vw;
   cursor: pointer;
 }
 .hov {
@@ -210,8 +379,56 @@ button {
 .justin article:hover .hov {
   display: contents;
 }
+
+@media screen and (max-width:414px) {
+  .justin h1{
+    text-align: center;
+    font-size: 3.4rem;
+  }
+  .justin p{
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem ;
+    font-size: 1.2rem;
+    /* overflow: auto; */
+  }
+  .hov button{
+    padding: 0.4rem 2rem;
+    width: fit-content;
+    font-size: 1rem;
+  }
+  .justin article{
+    /* width:15.2rem; */
+    width: 40vw;
+
+  }
+  .justin .new {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    /* gap: 0.8rem; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    margin-bottom:3.2rem ;
+    
+  }
+  .justin .new img{
+    width:40.5vw;
+    height: 20.3rem;
+  }
+
+  .justin article .rating{
+    margin-top: 1.2rem;
+    width: 28.47vw;
+    height: 4.27vw;
+
+  }
+  
+  
+}
 .category-section h1 {
-  font-size: 4rem;
+  /* font-size: 4rem; */
   text-align: center;
   margin-bottom: 4.8rem;
   margin-top: 4.8rem;
@@ -224,7 +441,7 @@ button {
   overflow: hidden;
 }
 .categories article p {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 1.6vw, 1.4rem);
   margin-top: 1.2rem;
   text-align: center;
   font-family: "Inter", sans-serif;
@@ -233,8 +450,29 @@ button {
 }
 .categories {
   display: flex;
-  gap: 2.4rem;
+  /* gap: 2.4rem; */
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  
+}
+@media screen and (max-width:414px) {
+  .categories h1{
+    margin-top: 4rem;
+    /* column-gap: 2.4rem;f */
+  }
+  
+  .categories article img{
+    height: 40.53vw;
+    width:40.53vw;
+  }
+  .categories article{
+    width:40.53vw;
+    margin-bottom: 2.4rem;
+  }
+  .categories{
+    margin-bottom: 1.6rem;
+  }
+  
 }
 .collections article .collection {
   height: 66.4rem;
@@ -245,7 +483,9 @@ button {
   display: flex;
   gap: 2.4rem;
   flex-wrap: wrap;
+  
 }
+
 .collections article {
   width: fit-content;
   height: fit-content;
@@ -291,6 +531,26 @@ button {
   border-right: none;
   border-left: none;
 }
+
+@media screen and (max-width:414px) {
+  .collection-img{
+    height: 37.7rem;
+    width:31.1rem;
+  }
+  .collections{
+    gap: 1.6rem;
+    margin-bottom: 4rem;
+  }
+  .article-text {
+    bottom: 3.2rem;
+    left: 3.2rem;
+  }
+  
+}
+/* ******************************************************
+sales  Starts
+****************************************************** 
+*/
 .best-sellers h1 {
   margin-top: 4.8rem;
   text-align: center;
@@ -298,9 +558,10 @@ button {
 .sales-section {
   width: 100vw;
   max-width: 144rem;
-  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
+  background-color: #f3f5f7;
+  align-items: center;
+  gap: 7.2rem;
 }
 
 .video-box {
@@ -315,28 +576,29 @@ button {
   height: 100%;
   object-fit: cover; /* crop to fill */
 }
-.sales-text {
-  background-color: #f3f5f7;
-  width: 50%;
-  position: relative;
+.sales-text button{
+  margin: 0;
 }
-.relate {
-  position: absolute;
-  left: 7.2rem;
-  top: 15.6rem;
+.sales-textin{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* text-align: start; */
+  align-items: start;
+  gap: 1.6rem;
 }
-p {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
+.video-box,.sales-textin{
+  flex: 1;
 }
-.relate h1 {
+
+/* .sales-section h1 {
   font-size: 4rem;
   line-height: 4.4rem;
   letter-spacing: -0.04rem;
   margin-top: 1.6rem;
   margin-bottom: 1.6rem;
   overflow: hidden;
-}
+} */
 .p1 {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -344,7 +606,7 @@ p {
   letter-spacing: 0;
   font-weight: 600;
   color: #377dff;
-}
+} 
 .p2 {
   font-size: 2rem;
   line-height: 3.2rem;
@@ -354,11 +616,64 @@ p {
   color: #141718;
   border: #141718;
   font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 .blk img {
   height: 2rem;
   width: 2rem;
+  margin: auto 0;
 }
+
+@media screen and (max-width:414px) {
+  .best-sellers h1{
+    margin-top:4rem;
+    font-size:3.4rem ;
+    line-height: 3.8rem;
+    margin-bottom: 1.6rem;
+  }
+  .sales-section {
+  width: 100vw;
+  max-width: 144rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  
+  /* flex-wrap: wrap; */
+  }
+
+  .video-box {
+    /* display: inline; */
+    width: 100vw;
+    height: 36.7rem;
+    overflow: hidden; /* crops overflow */
+  }
+  .sales-text {
+  /* background-color: #f3f5f7; */
+    width: 100vw;
+    
+  }
+  .relate{
+  margin-left: 3.2rem;
+  margin-top: 8.15rem;
+  margin: 8.15rem 3.2rem;
+  }
+  .relate h1{
+    font-size: 3.4rem;
+    line-height:3.8rem ;
+  }
+  .blk{
+    position: relative;
+  }
+  .blk img {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+}
+/* ******************************************************
+Promotion Section  Starts
+****************************************************** 
+*/
 .video-box2 {
   /* display: inline; */
   width: 112rem;
@@ -385,6 +700,29 @@ p {
   margin-bottom: 0;
 }
 
+@media screen and (max-width:414px) {
+  .video-box2 {
+  /* display: inline; */
+  width: 83vw;
+  height: 13.7rem;
+  overflow: hidden; /* crops overflow */
+  border-radius: 1.6rem;
+  margin-bottom: 2.4rem;
+  }
+  .promotion {
+    margin:3.2rem auto;
+
+  }
+  .promotion p{
+    font-size: 1.6rem;
+  }
+  .promotion h1{
+    font-size: 3.8rem;
+    line-height: 4.4rem;
+
+  }
+
+}
 .news-text {
   display: flex;
   flex-direction: column;
@@ -400,12 +738,12 @@ p {
   color: #6c7275;
 }
 .news-text .n3 {
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 1.6vw, 2rem);
   font-weight: 200;
   color: black;
 }
 .news-text .n2 {
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 1.6vw, 2rem);
   line-height: 2.8rem;
 }
 
@@ -414,13 +752,20 @@ p {
   flex-wrap: wrap;
   /* column-gap:auto ; */
   /* column-gap: 2.4rem; */
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+@media screen and (max-width:414px) {
+  .news-images{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
 }
 
 .values {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 1.6rem;
   margin-bottom: 1.6rem;
 }
@@ -455,6 +800,7 @@ p {
 }
 .foot{
   margin-bottom: 0;
+  margin-top: 0;
 
 }
 footer{
@@ -470,8 +816,8 @@ footer{
 }
 .one div{
   display: flex;
+  margin-top: 0;
   flex-direction: column;
-  
   gap: 0.8rem;
 }
 .one .title{
@@ -524,6 +870,7 @@ footer{
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap-reverse;
   margin-bottom: 3.2rem;
   justify-content: space-between;
 }
@@ -544,10 +891,16 @@ footer{
 .two .two-text{
   display:flex;
   flex-direction: row;
+
   gap:1.6rem;
   align-items: center;
   font-size:1.2rem;
 }
+.two .two-text p{
+  font-size: 1.2rem;
+}
+
+
 button{
   display: flex;
   justify-content: center;
@@ -559,7 +912,7 @@ button{
 
 }
 .one .email-box{
-  width: 35.2rem;
+  width: 30.77vw;
   height: 4.8rem;
   background-color: transparent;
   border-color: #6C7275;
@@ -597,3 +950,59 @@ button{
 
 
 }
+/* input:focus,textarea:focus{
+  outline:none;
+} */
+input,textarea{
+  user-select:text;
+  -webkit-user-select: text;
+  pointer-events: auto;
+  outline:none
+
+}
+
+@media screen and (max-width:414px) {
+  .one .email-box{
+    width: 82.933vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.12;
+  font-size: clamp(3.4rem,5vw,4rem);
+}
+/* p,button{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-size: clamp(1.6rem, 1.6vw, 2rem);
+  line-height: 1.1;
+  font-style: normal;
+  letter-spacing: 0px;
+
+} */
